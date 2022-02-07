@@ -10,5 +10,6 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Distance implements Serializable {
+    private String incomingDistanceInd;
 
 }

@@ -11,10 +11,10 @@ public class TemperatureService {
     public Temperature convertTemperature(Temperature t){
         try {
             if(t.getInputTempInd().equals("F")){
-                t.setConvertedValue((t.getConvertedValue()-32)*5/9);
+                t.setConvertedValue((t.getInputValue()-32)*(5.0/9.0));
             }
             else if (t.getInputTempInd().equals("C")){
-                t.setConvertedValue((t.getConvertedValue()*(9/5))+32);
+                t.setConvertedValue(9.0/5.0*t.getInputValue()+32);
             }
         }
         catch (Exception e){
