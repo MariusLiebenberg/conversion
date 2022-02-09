@@ -12,6 +12,7 @@ public class ConversionController {
     @Autowired
     private TemperatureService temperatureService;
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping(path="/convertToCelcius",consumes = "application/json",produces = "application/json")
     public Temperature convertToCelcius(@RequestBody  Temperature t){
         return temperatureService.convertTemperature(t);
